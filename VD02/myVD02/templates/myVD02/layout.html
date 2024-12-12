@@ -1,15 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="{% static 'myVD02\css\style.css' %}" rel="stylesheet">
     {% block title %}
-
     {% endblock %}
+
+
+
 </head>
 <body>
 
-{% block content %}
+    <aside>
 
-{% endblock %}
+        <img src="{% static 'myVD02\image\Logo.jpg' %}" alt="logo" width="200px">
+
+    </aside>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
 </body>
 </html>

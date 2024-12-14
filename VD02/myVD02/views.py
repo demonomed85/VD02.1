@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 def index(request):
     return render(request, 'myVD02/index.html')
@@ -7,6 +7,9 @@ def index(request):
 def new(request):
     return render(request, 'myVD02/new.html')
 
-def test(request):
-    return HttpResponse('Это страница test!')
+def page(request):
+    return render(request, 'myVD02/page.html')
+
+def page4(request):
+    return render(request, 'myVD02/page4.html')
 # Create your views here.

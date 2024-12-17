@@ -24,4 +24,5 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('', include('myVD02.urls')),
+    path('news/', include('news.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

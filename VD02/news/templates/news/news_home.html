@@ -1,0 +1,23 @@
+{% extends 'myVD02/layout.html' %}
+
+{% block title %}
+    <title>news Главная страница</title>
+{% endblock %}
+
+{% block content %}
+<h1>news <br>Главная страница</h1>
+<br>
+     <ul>
+         {% for item in news %}
+             <li>
+                 <h2>{{ item.title }}</h2>
+                 <p>{{ item.short_description }}</p>
+                 <p>{{ item.full_description }}</p>
+                 <p><strong>Автор:</strong> {{ item.author }}</p>
+                 <p><strong>Дата публикации:</strong> {{ item.created_at }}</p>
+             </li>
+         {% empty %}
+             <li>Нет новостей.</li>
+         {% endfor %}
+     </ul>
+{% endblock %}
